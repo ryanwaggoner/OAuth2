@@ -88,9 +88,9 @@ open class OAuth2Response {
 		else if 401 == response.statusCode {
 			throw OAuth2Error.unauthorizedClient
 		}
-		else if 403 == response.statusCode {
-			throw OAuth2Error.forbidden
-		}
+//		else if 403 == response.statusCode {
+//			throw OAuth2Error.forbidden
+//		}
 		else if let data = data, data.count > 0 {
 			return data
 		}
